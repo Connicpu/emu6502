@@ -1,6 +1,7 @@
 use bus::{Backend, BusEntry};
 use std::fmt;
 
+/// 32k of main memory!
 pub struct Ram {
     data: [u8; 0x8000],
 }
