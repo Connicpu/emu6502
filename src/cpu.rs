@@ -27,6 +27,10 @@ pub struct Cpu {
 }
 
 impl Cpu {
+    pub fn attach_backend(&mut self, entry: bus::BusEntry) {
+        self.bus.attach(entry);
+    }
+    
     pub fn reset(&mut self) {
         self.pc = self.bus.read_u16(0xFFFC);
         self.sr = 0x34;

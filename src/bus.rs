@@ -49,7 +49,7 @@ impl Bus {
         entry.write(addr + 1, (value >> 8) as u8);
     }
     
-    pub fn shutdown(&mut self) {
+    pub fn clear(&mut self) {
         self.entries.clear();
     }
     
